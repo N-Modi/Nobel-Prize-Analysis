@@ -7516,8 +7516,17 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><p>The <strong>Nobel Prize</strong> is one of the most prestigious international awards, recognizing outstanding achievements in fields such as Physics, Chemistry, Medicine, Literature, and Peace. For over a century, Nobel Laureates have been honored for their contributions to humanity, and their achievements have had a profound impact on global progress.</p>
-<p>For this project, we chose to analyze the <strong>Nobel Laureates Dataset</strong>, which contains detailed information about the individuals who have received the Nobel Prize. The dataset includes attributes such as the year of the award, the category, the laureates' country of birth, gender, and even their age at the time of the award. This dataset provides an excellent opportunity to explore various patterns and trends in the history of the Nobel Prize.</p>
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><p>The <strong>Nobel Prize</strong> is one of the most prestigious international awards, recognizing individuals and organizations for outstanding achievements in various fields such as <strong>Physics</strong>, <strong>Chemistry</strong>, <strong>Medicine</strong>, <strong>Literature</strong>, and <strong>Peace</strong>. The Nobel Prizes have been awarded since 1901, and they provide a global standard for recognizing excellence across scientific and humanitarian domains. For this project, we chose to analyze the <strong>Nobel Laureates Dataset</strong>, which contains detailed information on the individuals who have been awarded the Nobel Prize, including attributes like the year of the award, the category, the laureates' country of birth, gender, and their age at the time of the award.</p>
+<p>This dataset is valuable because it offers a comprehensive view of the history of the Nobel Prize, allowing us to uncover patterns and trends over time. By analyzing the data, we can explore how the recognition of outstanding individuals in academia and humanitarian efforts has evolved, and whether certain groups (such as specific countries or genders) are more likely to receive Nobel Prizes. It also helps us understand the broader trends in global research and social progress.</p>
+<h4 id="Why:-Understanding-the-Nobel-Prize-distribution-over-time-helps-highlight-key-areas-where-progress-is-being-made,-as-well-as-areas-that-require-more-attention,-such-as-gender-equality-or-representation-from-developing-countries."><strong>Why</strong>: Understanding the Nobel Prize distribution over time helps highlight key areas where progress is being made, as well as areas that require more attention, such as gender equality or representation from developing countries.<a class="anchor-link" href="#Why:-Understanding-the-Nobel-Prize-distribution-over-time-helps-highlight-key-areas-where-progress-is-being-made,-as-well-as-areas-that-require-more-attention,-such-as-gender-equality-or-representation-from-developing-countries.">¶</a></h4><h4 id="Who:-The-stakeholders-benefiting-from-this-analysis-include-researchers,-educators,-policymakers,-and-international-organizations-focused-on-promoting-equal-opportunities-in-education,-research,-and-human-rights.-By-uncovering-patterns-in-Nobel-recognitions,-these-groups-can-advocate-for-policies-that-increase-diversity-and-ensure-that-global-talent-is-recognized,-regardless-of-gender-or-country."><strong>Who</strong>: The stakeholders benefiting from this analysis include <strong>researchers</strong>, <strong>educators</strong>, <strong>policymakers</strong>, and <strong>international organizations</strong> focused on promoting equal opportunities in education, research, and human rights. By uncovering patterns in Nobel recognitions, these groups can advocate for policies that increase diversity and ensure that global talent is recognized, regardless of gender or country.<a class="anchor-link" href="#Who:-The-stakeholders-benefiting-from-this-analysis-include-researchers,-educators,-policymakers,-and-international-organizations-focused-on-promoting-equal-opportunities-in-education,-research,-and-human-rights.-By-uncovering-patterns-in-Nobel-recognitions,-these-groups-can-advocate-for-policies-that-increase-diversity-and-ensure-that-global-talent-is-recognized,-regardless-of-gender-or-country.">¶</a></h4><h4 id="Where:-This-data-was-sourced-from-the-Nobel-Prize-API-and-reflects-laureates-from-all-over-the-world,-showcasing-a-global-perspective-on-achievement-and-recognition."><strong>Where</strong>: This data was sourced from the <strong>Nobel Prize API</strong> and reflects laureates from all over the world, showcasing a <strong>global</strong> perspective on achievement and recognition.<a class="anchor-link" href="#Where:-This-data-was-sourced-from-the-Nobel-Prize-API-and-reflects-laureates-from-all-over-the-world,-showcasing-a-global-perspective-on-achievement-and-recognition.">¶</a></h4><h4 id="When:-The-Nobel-Prizes-have-been-awarded-annually-since-1901,-making-this-dataset-rich-with-historical-context-and-providing-an-opportunity-to-study-long-term-trends-in-Nobel-recognition."><strong>When</strong>: The Nobel Prizes have been awarded annually since <strong>1901</strong>, making this dataset rich with historical context and providing an opportunity to study long-term trends in Nobel recognition.<a class="anchor-link" href="#When:-The-Nobel-Prizes-have-been-awarded-annually-since-1901,-making-this-dataset-rich-with-historical-context-and-providing-an-opportunity-to-study-long-term-trends-in-Nobel-recognition.">¶</a></h4><hr/>
+<p>By analyzing this dataset, we aim to shed light on:</p>
+<ul>
+<li>The distribution of Nobel Prizes by category and country.</li>
+<li>Gender disparities and the rising recognition of women in the fields of science and literature.</li>
+<li>The age of laureates and how it correlates with their field of achievement.</li>
+<li>The impact of global political and social changes on the recognition of laureates.</li>
+</ul>
+<p>This analysis not only highlights historical trends but also serves as a foundation for future discussions on improving representation, diversity, and global collaboration in research and humanitarian efforts.</p>
 <p>In this analysis, we will address the following questions:</p>
 <ul>
 <li>What is the distribution of Nobel Prizes across categories?</li>
@@ -7737,6 +7746,36 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c6230d7d-ffed-4515-a8d7-4e6c5bca51b4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Understanding-of-the-Dataset">Understanding of the Dataset<a class="anchor-link" href="#Understanding-of-the-Dataset">¶</a></h3><p>The <strong>Nobel Laureates Dataset</strong> contains information on individuals who have won the Nobel Prize from its inception in 1901 up to the present. This dataset provides various fields that are critical for understanding patterns in Nobel recognitions:</p>
+<ul>
+<li><strong>id</strong>: A unique identifier for each laureate.</li>
+<li><strong>firstname</strong> and <strong>surname</strong>: The laureate's first and last names.</li>
+<li><strong>born</strong>: The birthdate of the laureate, which is used to calculate their age at the time of the award.</li>
+<li><strong>died</strong>: The date of death (if applicable), providing context for the laureate's lifespan and career.</li>
+<li><strong>bornCountry</strong>: The country in which the laureate was born. This is a critical field for analyzing the geographical distribution of Nobel laureates.</li>
+<li><strong>bornCountryCode</strong>: The country code, helping us map the laureate's nationality to a standard code.</li>
+<li><strong>bornCity</strong>: The city where the laureate was born.</li>
+<li><strong>diedCountry</strong> and <strong>diedCity</strong>: These fields are helpful in understanding the final years of the laureates’ lives and the geographical mobility of laureates.</li>
+<li><strong>gender</strong>: Indicates the gender of the laureate. This field allows for an exploration of gender disparities among Nobel laureates.</li>
+<li><strong>year</strong>: The year the laureate received the Nobel Prize. This is used to analyze trends over time, such as changes in the number of laureates and their distribution by category.</li>
+<li><strong>category</strong>: The category in which the laureate received the award (e.g., <strong>Physics</strong>, <strong>Chemistry</strong>, <strong>Medicine</strong>, <strong>Literature</strong>, <strong>Peace</strong>). This is a key variable for analyzing the distribution of Nobel Prizes across various fields of achievement.</li>
+<li><strong>overallMotivation</strong>: The motivation given for the award. This field helps understand the context behind each award.</li>
+<li><strong>share</strong>: Indicates how the prize was shared (e.g., between multiple laureates).</li>
+<li><strong>motivation</strong>: A more detailed explanation of the laureate's contribution that earned them the Nobel Prize.</li>
+<li><strong>name, city, country</strong>: These fields provide information about the institution or location that played a key role in the laureate's work.</li>
+</ul>
+<p>The dataset's structure allows for comprehensive analysis of several critical questions. For instance, we can explore the geographic distribution of Nobel laureates by analyzing the <strong>bornCountry</strong> field, examine the gender disparity by analyzing <strong>gender</strong>, and study the evolution of laureates' ages by calculating the difference between <strong>born</strong> and <strong>year</strong>.</p>
+<p>This dataset is highly relevant for exploring trends in scientific and humanitarian recognition, providing a detailed historical record of the Nobel Prize's impact over the last century.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab92ae0d-f48b-4274-931f-a180d7ad9d40">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7754,7 +7793,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Check for missing values</code></pre>
+<h5 id="Check-for-missing-values">Check for missing values<a class="anchor-link" href="#Check-for-missing-values">¶</a></h5>
 </div>
 </div>
 </div>
@@ -7812,7 +7851,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Fill or drop missing values</code></pre>
+<h5 id="Fill-or-drop-missing-values">Fill or drop missing values<a class="anchor-link" href="#Fill-or-drop-missing-values">¶</a></h5>
 </div>
 </div>
 </div>
@@ -7841,7 +7880,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Convert data types</code></pre>
+<h5 id="Convert-data-types">Convert data types<a class="anchor-link" href="#Convert-data-types">¶</a></h5>
 </div>
 </div>
 </div>
@@ -7900,7 +7939,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 1: Distribution of Nobel Prizes by Category (Plot distribution of Nobel Prizes by category)</code></pre>
+<h2 id="Question-1:-Distribution-of-Nobel-Prizes-by-Category-(Plot-distribution-of-Nobel-Prizes-by-category)">Question 1: Distribution of Nobel Prizes by Category (Plot distribution of Nobel Prizes by category)<a class="anchor-link" href="#Question-1:-Distribution-of-Nobel-Prizes-by-Category-(Plot-distribution-of-Nobel-Prizes-by-category)">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7944,7 +7983,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-1:-Nobel-Prizes-by-Category">Insight 1: Nobel Prizes by Category<a class="anchor-link" href="#Insight-1:-Nobel-Prizes-by-Category">¶</a></h3><p>The distribution of Nobel Prizes across various categories highlights that <strong>Medicine</strong> has been the most awarded field, followed by <strong>Physics</strong> and <strong>Chemistry</strong>. This pattern can be attributed to the rapid advancements in these scientific fields, particularly during the 20th century. The major scientific revolutions—such as the development of quantum mechanics and the theory of relativity in Physics, as well as the discovery of DNA and other medical breakthroughs—have had profound impacts on society and the world at large.</p>
+<h4 id="Insight-1:-Nobel-Prizes-by-Category">Insight 1: Nobel Prizes by Category<a class="anchor-link" href="#Insight-1:-Nobel-Prizes-by-Category">¶</a></h4><p>The distribution of Nobel Prizes across various categories highlights that <strong>Medicine</strong> has been the most awarded field, followed by <strong>Physics</strong> and <strong>Chemistry</strong>. This pattern can be attributed to the rapid advancements in these scientific fields, particularly during the 20th century. The major scientific revolutions—such as the development of quantum mechanics and the theory of relativity in Physics, as well as the discovery of DNA and other medical breakthroughs—have had profound impacts on society and the world at large.</p>
 <p>The <strong>Literature</strong> and <strong>Peace</strong> categories, while significant, have fewer laureates. This could be due to the subjective nature of literary recognition, which requires cultural influence, storytelling mastery, and artistry that resonate on a global scale. Similarly, the <strong>Peace</strong> category, while equally prestigious, often recognizes long-term, diplomatic or humanitarian efforts, which can take years, even decades, to yield results. The fewer laureates in these categories do not diminish their importance but reflect the broad and sustained impact needed for such recognition.</p>
 </div>
 </div>
@@ -7956,7 +7995,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 2: Number of Laureates Over Time (Group by year and count laureates)</code></pre>
+<h2 id="Question-2:-Number-of-Laureates-Over-Time-(Group-by-year-and-count-laureates)">Question 2: Number of Laureates Over Time (Group by year and count laureates)<a class="anchor-link" href="#Question-2:-Number-of-Laureates-Over-Time-(Group-by-year-and-count-laureates)">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8001,7 +8040,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-2:-Number-of-Laureates-Over-Time">Insight 2: Number of Laureates Over Time<a class="anchor-link" href="#Insight-2:-Number-of-Laureates-Over-Time">¶</a></h3><p>The steady rise in the number of Nobel Laureates from year to year can be traced to several factors: the <strong>expansion of categories</strong>, the increasing <strong>globalization of research</strong>, and the overall <strong>advancement in academic fields</strong>. Initially, the Nobel Prizes were awarded to a select few, but as more research disciplines emerged and global awareness of scientific progress grew, the number of laureates expanded significantly.</p>
+<h4 id="Insight-2:-Number-of-Laureates-Over-Time">Insight 2: Number of Laureates Over Time<a class="anchor-link" href="#Insight-2:-Number-of-Laureates-Over-Time">¶</a></h4><p>The steady rise in the number of Nobel Laureates from year to year can be traced to several factors: the <strong>expansion of categories</strong>, the increasing <strong>globalization of research</strong>, and the overall <strong>advancement in academic fields</strong>. Initially, the Nobel Prizes were awarded to a select few, but as more research disciplines emerged and global awareness of scientific progress grew, the number of laureates expanded significantly.</p>
 <p>In the mid-20th century, we see a pronounced increase in laureates, particularly from the <strong>1960s to the 1980s</strong>. This period coincided with scientific breakthroughs in fields like <strong>Genetics</strong>, <strong>Nuclear Physics</strong>, and <strong>Medical Research</strong>, such as the discovery of the structure of DNA and the development of nuclear energy. Moreover, the post-World War II era saw a global collaboration in science, with countries investing more in research, which increased the number of Nobel Prizes awarded. The <strong>late 20th century</strong> and <strong>early 21st century</strong> also marked a rise in the recognition of <strong>humanitarian efforts</strong>, resulting in more laureates in <strong>Peace</strong> and <strong>Literature</strong> categories.</p>
 </div>
 </div>
@@ -8013,7 +8052,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 3: Countries with Most Laureates (Plot Top 10 countries)</code></pre>
+<h2 id="Question-3:-Countries-with-Most-Laureates-(Plot-Top-10-countries)">Question 3: Countries with Most Laureates (Plot Top 10 countries)<a class="anchor-link" href="#Question-3:-Countries-with-Most-Laureates-(Plot-Top-10-countries)">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8057,7 +8096,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-3:-Top-10-Countries-by-Number-of-Laureates">Insight 3: Top 10 Countries by Number of Laureates<a class="anchor-link" href="#Insight-3:-Top-10-Countries-by-Number-of-Laureates">¶</a></h3><p>The <strong>United States</strong> dominates the Nobel Prize list, with a significantly higher number of laureates than any other country. This is due to the immense investment in scientific research and education in the U.S. The <strong>post-WWII era</strong> marked the beginning of U.S. dominance, with a growing emphasis on technological and scientific development, particularly in <strong>Physics</strong>, <strong>Medicine</strong>, and <strong>Chemistry</strong>. The establishment of institutions like <strong>NASA</strong>, <strong>Harvard</strong>, and <strong>MIT</strong> helped propel the U.S. to the forefront of global innovation and discovery.</p>
+<h4 id="Insight-3:-Top-10-Countries-by-Number-of-Laureates">Insight 3: Top 10 Countries by Number of Laureates<a class="anchor-link" href="#Insight-3:-Top-10-Countries-by-Number-of-Laureates">¶</a></h4><p>The <strong>United States</strong> dominates the Nobel Prize list, with a significantly higher number of laureates than any other country. This is due to the immense investment in scientific research and education in the U.S. The <strong>post-WWII era</strong> marked the beginning of U.S. dominance, with a growing emphasis on technological and scientific development, particularly in <strong>Physics</strong>, <strong>Medicine</strong>, and <strong>Chemistry</strong>. The establishment of institutions like <strong>NASA</strong>, <strong>Harvard</strong>, and <strong>MIT</strong> helped propel the U.S. to the forefront of global innovation and discovery.</p>
 <p>Countries like <strong>Germany</strong> and the <strong>United Kingdom</strong> also contribute substantially to the Nobel tally, reflecting their long-standing tradition of academic excellence. However, countries in <strong>Africa</strong>, <strong>Asia</strong>, and <strong>Latin America</strong> still show underrepresentation in the Nobel Laureate list, reflecting disparities in <strong>access to education</strong>, <strong>research funding</strong>, and <strong>global collaboration</strong>. The gap suggests that more investment in global education and research infrastructure is necessary to level the playing field.</p>
 </div>
 </div>
@@ -8069,7 +8108,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 4: Gender Distribution (Gender count pie chart)</code></pre>
+<h2 id="Question-4:-Gender-Distribution-(Gender-count-pie-chart)">Question 4: Gender Distribution (Gender count pie chart)<a class="anchor-link" href="#Question-4:-Gender-Distribution-(Gender-count-pie-chart)">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8112,7 +8151,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-4:-Gender-Distribution-of-Laureates">Insight 4: Gender Distribution of Laureates<a class="anchor-link" href="#Insight-4:-Gender-Distribution-of-Laureates">¶</a></h3><p>The gender distribution of Nobel Laureates reveals a strong <strong>disparity between male and female laureates</strong>. The overwhelming majority of laureates are male, particularly in scientific fields like <strong>Physics</strong> and <strong>Chemistry</strong>, where women have historically been underrepresented due to gender biases in education and research opportunities.</p>
+<h4 id="Insight-4:-Gender-Distribution-of-Laureates">Insight 4: Gender Distribution of Laureates<a class="anchor-link" href="#Insight-4:-Gender-Distribution-of-Laureates">¶</a></h4><p>The gender distribution of Nobel Laureates reveals a strong <strong>disparity between male and female laureates</strong>. The overwhelming majority of laureates are male, particularly in scientific fields like <strong>Physics</strong> and <strong>Chemistry</strong>, where women have historically been underrepresented due to gender biases in education and research opportunities.</p>
 <p>However, the <strong>increase in female laureates</strong> over the past few decades is a positive trend. In the last few decades, the recognition of women in <strong>Medicine</strong> and <strong>Literature</strong> has increased. These milestones indicate a significant shift toward gender equality in academia and research, but there is still work to be done in ensuring equal representation across all Nobel Prize categories, especially in the traditionally male-dominated scientific fields.</p>
 </div>
 </div>
@@ -8124,7 +8163,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 5: Average Age of Laureates </code></pre>
+<h2 id="Question-5:-Average-Age-of-Laureates">Question 5: Average Age of Laureates<a class="anchor-link" href="#Question-5:-Average-Age-of-Laureates">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8170,7 +8209,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-5:-Average-Age-of-Laureates-at-the-Time-of-Their-Award">Insight 5: Average Age of Laureates at the Time of Their Award<a class="anchor-link" href="#Insight-5:-Average-Age-of-Laureates-at-the-Time-of-Their-Award">¶</a></h3><p>The average age of Nobel Laureates at the time of receiving their prize is around <strong>60 years</strong>. This suggests that most laureates are not awarded immediately after their discoveries but instead after decades of work. This pattern highlights that the Nobel Prize recognizes sustained contributions to humanity—individuals who have worked for years or even decades to achieve breakthrough research or humanitarian goals.</p>
+<h4 id="Insight-5:-Average-Age-of-Laureates-at-the-Time-of-Their-Award">Insight 5: Average Age of Laureates at the Time of Their Award<a class="anchor-link" href="#Insight-5:-Average-Age-of-Laureates-at-the-Time-of-Their-Award">¶</a></h4><p>The average age of Nobel Laureates at the time of receiving their prize is around <strong>60 years</strong>. This suggests that most laureates are not awarded immediately after their discoveries but instead after decades of work. This pattern highlights that the Nobel Prize recognizes sustained contributions to humanity—individuals who have worked for years or even decades to achieve breakthrough research or humanitarian goals.</p>
 <p>Interestingly, while laureates in fields like <strong>Literature</strong> and <strong>Peace</strong> tend to be older, with many being recognized later in life, laureates in <strong>Physics</strong> and <strong>Chemistry</strong> are typically younger. These scientific fields require a high level of intellectual creativity and innovation, which often peaks earlier in a person’s career. The age data suggests that Nobel Prizes are not only about groundbreaking achievements but also about cumulative, sustained contributions to human knowledge and progress.</p>
 </div>
 </div>
@@ -8182,7 +8221,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 6: Prizes by Decade </code></pre>
+<h2 id="Question-6:-Prizes-by-Decade">Question 6: Prizes by Decade<a class="anchor-link" href="#Question-6:-Prizes-by-Decade">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8227,7 +8266,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-6:-Nobel-Prizes-by-Decade">Insight 6: Nobel Prizes by Decade<a class="anchor-link" href="#Insight-6:-Nobel-Prizes-by-Decade">¶</a></h3><p>The number of Nobel Prizes awarded each decade has fluctuated, with significant growth in the <strong>1960s and 1970s</strong>, a period characterized by rapid technological advances and groundbreaking scientific research. This era also saw an increasing number of laureates in fields like <strong>Peace</strong>, as global conflicts spurred diplomatic efforts.</p>
+<h4 id="Insight-6:-Nobel-Prizes-by-Decade">Insight 6: Nobel Prizes by Decade<a class="anchor-link" href="#Insight-6:-Nobel-Prizes-by-Decade">¶</a></h4><p>The number of Nobel Prizes awarded each decade has fluctuated, with significant growth in the <strong>1960s and 1970s</strong>, a period characterized by rapid technological advances and groundbreaking scientific research. This era also saw an increasing number of laureates in fields like <strong>Peace</strong>, as global conflicts spurred diplomatic efforts.</p>
 <p>The <strong>1990s and 2000s</strong> saw the recognition of <strong>global peace efforts</strong>, such as those led by organizations like the <strong>United Nations</strong> and individuals. These decades marked a shift in the Nobel Committee’s focus, emphasizing humanitarian work alongside scientific and literary achievements. This increase in laureates reflects the expanding scope of the Nobel Prizes and the growing recognition of <strong>global collaboration</strong>, <strong>environmental sustainability</strong>, and <strong>human rights</strong>.</p>
 </div>
 </div>
@@ -8239,7 +8278,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 7: Countries with most Growth in Laureates Over Time</code></pre>
+<h2 id="Question-7:-Countries-with-most-Growth-in-Laureates-Over-Time">Question 7: Countries with most Growth in Laureates Over Time<a class="anchor-link" href="#Question-7:-Countries-with-most-Growth-in-Laureates-Over-Time">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8284,7 +8323,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-7:-Countries-with-the-Most-Growth-in-Laureates">Insight 7: Countries with the Most Growth in Laureates<a class="anchor-link" href="#Insight-7:-Countries-with-the-Most-Growth-in-Laureates">¶</a></h3><p>Countries like the <strong>United States</strong>, <strong>Germany</strong>, and <strong>the United Kingdom</strong> have consistently produced a high number of Nobel Laureates, but countries that have seen the most growth over time include <strong>Japan</strong>and  <strong>China</strong>.</p>
+<h4 id="Insight-7:-Countries-with-the-Most-Growth-in-Laureates">Insight 7: Countries with the Most Growth in Laureates<a class="anchor-link" href="#Insight-7:-Countries-with-the-Most-Growth-in-Laureates">¶</a></h4><p>Countries like the <strong>United States</strong>, <strong>Germany</strong>, and <strong>the United Kingdom</strong> have consistently produced a high number of Nobel Laureates, but countries that have seen the most growth over time include <strong>Japan</strong>and  <strong>China</strong>.</p>
 <p>For example, Japan’s rise in Nobel recognition in the <strong>1990s</strong> and <strong>2000s</strong> can be attributed to significant advancements in <strong>Physics</strong> and <strong>Chemistry</strong>. Similarly, <strong>China’s</strong> increase in laureates over the last few decades reflects its growing prominence in global scientific and technological development, especially in fields like <strong>Physics</strong> and <strong>Medicine</strong>.</p>
 <p>This growth in Nobel recognition from countries outside of traditional powerhouses like the U.S. and Europe reflects broader global access to education and research, as well as the increasing participation of countries in the global scientific community.</p>
 </div>
@@ -8297,7 +8336,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 8: Relationship Between Age and Award Category</code></pre>
+<h2 id="Question-8:-Relationship-Between-Age-and-Award-Category">Question 8: Relationship Between Age and Award Category<a class="anchor-link" href="#Question-8:-Relationship-Between-Age-and-Award-Category">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8339,7 +8378,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-8:-Age-and-Award-Category">Insight 8: Age and Award Category<a class="anchor-link" href="#Insight-8:-Age-and-Award-Category">¶</a></h3><p>There is a notable relationship between the age of Nobel Laureates and the category in which they receive their award. For example, <strong>Peace</strong> and <strong>Literature</strong> laureates tend to be older, as these categories often recognize a lifetime of contributions to society. Laureates in these fields are often individuals who have dedicated many years, or even decades, to their cause or craft.</p>
+<h4 id="Insight-8:-Age-and-Award-Category">Insight 8: Age and Award Category<a class="anchor-link" href="#Insight-8:-Age-and-Award-Category">¶</a></h4><p>There is a notable relationship between the age of Nobel Laureates and the category in which they receive their award. For example, <strong>Peace</strong> and <strong>Literature</strong> laureates tend to be older, as these categories often recognize a lifetime of contributions to society. Laureates in these fields are often individuals who have dedicated many years, or even decades, to their cause or craft.</p>
 <p>On the other hand, laureates in <strong>Physics</strong> and <strong>Chemistry</strong> tend to be younger. The nature of scientific discovery, particularly in these fields, often favors younger researchers who bring fresh perspectives and innovative ideas. The intensity and creativity required in these disciplines often peak at earlier stages in one's career, contributing to the relatively younger average age of laureates in these fields.</p>
 <p>This trend highlights the differences in the recognition patterns between creative intellectual endeavors (like literature and peace) and fields requiring more intense, rapid scientific breakthroughs.</p>
 </div>
@@ -8352,7 +8391,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 9: Proportion of Laureates Who Share the Prize</code></pre>
+<h2 id="Question-9:-Proportion-of-Laureates-Who-Share-the-Prize">Question 9: Proportion of Laureates Who Share the Prize<a class="anchor-link" href="#Question-9:-Proportion-of-Laureates-Who-Share-the-Prize">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8397,7 +8436,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-9:-Proportion-of-Laureates-Who-Share-the-Prize">Insight 9: Proportion of Laureates Who Share the Prize<a class="anchor-link" href="#Insight-9:-Proportion-of-Laureates-Who-Share-the-Prize">¶</a></h3><p>An interesting aspect of the Nobel Prize is the <strong>proportion of laureates who share the prize</strong>. While many laureates receive the prize individually, a significant number of Nobel Prizes are shared between two or three individuals. The data reveals that around <strong>30%</strong> of the laureates have shared their prize, particularly in the fields of <strong>Physics</strong>, <strong>Chemistry</strong>, and <strong>Medicine</strong>, where collaborations are often essential to scientific discoveries.</p>
+<h4 id="Insight-9:-Proportion-of-Laureates-Who-Share-the-Prize">Insight 9: Proportion of Laureates Who Share the Prize<a class="anchor-link" href="#Insight-9:-Proportion-of-Laureates-Who-Share-the-Prize">¶</a></h4><p>An interesting aspect of the Nobel Prize is the <strong>proportion of laureates who share the prize</strong>. While many laureates receive the prize individually, a significant number of Nobel Prizes are shared between two or three individuals. The data reveals that around <strong>30%</strong> of the laureates have shared their prize, particularly in the fields of <strong>Physics</strong>, <strong>Chemistry</strong>, and <strong>Medicine</strong>, where collaborations are often essential to scientific discoveries.</p>
 <p>The shared nature of these prizes reflects the collaborative nature of modern research, where breakthroughs are often the result of joint efforts by scientists working together across institutions and countries. This highlights the importance of global collaboration in advancing knowledge and solving complex problems.</p>
 </div>
 </div>
@@ -8409,7 +8448,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<pre><code>Question 10: Nobel Prizes by Motivation</code></pre>
+<h2 id="Question-10:-Nobel-Prizes-by-Motivation">Question 10: Nobel Prizes by Motivation<a class="anchor-link" href="#Question-10:-Nobel-Prizes-by-Motivation">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8454,7 +8493,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Insight-10:-Nobel-Prizes-by-Motivation">Insight 10: Nobel Prizes by Motivation<a class="anchor-link" href="#Insight-10:-Nobel-Prizes-by-Motivation">¶</a></h3><p>The motivation behind Nobel Prizes varies widely, from scientific advancements to peace efforts. However, a significant proportion of laureates are recognized for <strong>scientific discoveries</strong>, with fields like <strong>Medicine</strong> and <strong>Physics</strong> consistently being the focus of Nobel recognition. Motivations like "discovering the secret of life" (in reference to groundbreaking medical discoveries) or "advancing our understanding of the universe" (in reference to breakthroughs in physics) demonstrate the Nobel Prize's dedication to rewarding the most transformative ideas in human history.</p>
+<h4 id="Insight-10:-Nobel-Prizes-by-Motivation">Insight 10: Nobel Prizes by Motivation<a class="anchor-link" href="#Insight-10:-Nobel-Prizes-by-Motivation">¶</a></h4><p>The motivation behind Nobel Prizes varies widely, from scientific advancements to peace efforts. However, a significant proportion of laureates are recognized for <strong>scientific discoveries</strong>, with fields like <strong>Medicine</strong> and <strong>Physics</strong> consistently being the focus of Nobel recognition. Motivations like "discovering the secret of life" (in reference to groundbreaking medical discoveries) or "advancing our understanding of the universe" (in reference to breakthroughs in physics) demonstrate the Nobel Prize's dedication to rewarding the most transformative ideas in human history.</p>
 <p>The <strong>Peace</strong> category, on the other hand, often recognizes efforts in international diplomacy, human rights, and global conflict resolution. The diverse motivations behind the awards illustrate the broad range of human achievement that the Nobel Prize seeks to honor, from intellectual breakthroughs to profound contributions to global peace.</p>
 </div>
 </div>
